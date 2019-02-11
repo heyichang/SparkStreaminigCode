@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <default-config>
+        <!-- 数据库连接属性 -->
+
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://172.16.3.35:3306/smm_test?rewriteBatchedStatements=true</property>
+        <property name="user">root</property>
+        <property name="password">1qaz@WSX</property>
+        <!-- 连接池相应的属性 -->
+
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">1800</property>
+        <property name="maxPoolSize">50</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxStatements">50</property>
+        <property name="idleConnectionTestPeriod">1800</property>
+        <property name="connectionTimeoutInMs">5000</property>
+        <property name="testConnectionOnCheckin" value="false"/>
+        <property name="testConnectionOnCheckout" value="true"/>
+        <property name="preferredTestQuery" value="SELECT 1"/>
+        <parameter>
+            <name>testConnectionOnCheckin</name>
+            <value>true</value>
+        </parameter>
+        <parameter>
+            <name>idleConnectionTestPeriod</name>
+            <value>60</value>
+        </parameter>
+
+    </default-config>
+</c3p0-config>

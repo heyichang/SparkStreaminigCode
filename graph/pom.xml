@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>graph</groupId>
+    <artifactId>graph</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+    <module>graphx_demo</module>
+        <module>graph-realprocessing</module>
+        <module>graph_account</module>
+        <module>graph_accoutREL</module>
+        <module>SelectDataOfWK</module>
+        <module>cypherOff</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.version>4.12</junit.version>
+        <hbase-client.version>1.1.2</hbase-client.version>
+        <hbase-common.version>1.1.2</hbase-common.version>
+        <spark-core_2.10.version>1.6.2</spark-core_2.10.version>
+        <spark-sql_2.10.version>1.6.2</spark-sql_2.10.version>
+        <spark-streaming-kafka_2.10.version>1.6.2</spark-streaming-kafka_2.10.version>
+        <junit.version>4.12</junit.version>
+        <kafka-clients.version>0.10.0.0</kafka-clients.version>
+        <kafka_2.10.version>0.8.2.1</kafka_2.10.version>
+        <slf4j-api.version>1.7.5</slf4j-api.version>
+        <slf4j-log4j12.version>1.7.5</slf4j-log4j12.version>
+        <log4j.version>1.2.17</log4j.version>
+        <fastjson.version>1.2.6</fastjson.version>
+            <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
+        <c3p0.version>0.9.5.1</c3p0.version>
+        <elasticsearch.version>5.6.0</elasticsearch.version>
+        <transport.version>5.6.0</transport.version>
+        <elasticsearch-spark-13_2.10.version>5.6.0</elasticsearch-spark-13_2.10.version>
+        <log4j-api.version>2.7</log4j-api.version>
+        <log4j-core.version>2.7</log4j-core.version>
+        <httpclient.version>4.5.3</httpclient.version>
+        <netty-all.version>4.1.13.Final</netty-all.version>
+
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-clients</artifactId>
+                <version>${kafka-clients.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty-all.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka_2.10</artifactId>
+                <version>${kafka_2.10.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_2.10</artifactId>
+                <version>${spark-core_2.10.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-streaming_2.10</artifactId>
+                <version>${spark-streaming-kafka_2.10.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-streaming-kafka_2.10</artifactId>
+                <version>${spark-streaming-kafka_2.10.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j-log4j12.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.hbase</groupId>
+                <artifactId>hbase-client</artifactId>
+                <version>${hbase-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.hbase</groupId>
+                <artifactId>hbase-common</artifactId>
+                <version>${hbase-common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mchange</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${c3p0.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>transport</artifactId>
+                <version>${transport.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j-core.version}</version>
+            </dependency>
+
+            <!--neo4j 相关的依赖包-->
+            <dependency>
+                <groupId>org.neo4j</groupId>
+                <artifactId>neo4j</artifactId>
+                <version>3.3.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.neo4j.driver</groupId>
+                <artifactId>neo4j-java-driver</artifactId>
+                <version>1.4.0</version>
+            </dependency>
+
+            <!--neo4j-->
+            <!--neo4j 依赖-->
+            <dependency>
+                <groupId>org.neo4j</groupId>
+                <artifactId>neo4j</artifactId>
+                <version>3.3.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.neo4j.driver</groupId>
+                <artifactId>neo4j-java-driver</artifactId>
+                <version>1.4.0</version>
+            </dependency>
+
+
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
